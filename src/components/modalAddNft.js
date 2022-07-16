@@ -42,28 +42,31 @@ function ModalAddNft(props) {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <h2 className="text-2xl font-bold mb-4">Add new NFT</h2>
-        
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
-            <input type="hidden" {...register("hiddenId")} />
-            <div className="flex flex-col">
-                <label htmlFor="image">Picture</label>
-                <input type="file" {...register("image")} />
-            </div>
-            <div className="flex flex-col">
-                <label htmlFor="title">Title</label>
-                <input className="border p-3 rounded-md" type="text" {...register("title")} />
-            </div>
-            <div className="flex flex-col">
-                <label htmlFor="description">Description</label>
-                <input className="border p-3 rounded-md" type="text" {...register("description")} />
-            </div>
-            <div className="flex flex-col">
-                <label htmlFor="price">Price</label>
-                <input className="border p-3 rounded-md" type="number" step=".01" {...register("price")} />
-            </div>
-            <button type="submit" className="border p-3 hover:bg-gray-200 hover:border-black rounded-md">Save</button>
-        </form>
+        <div className="relative">
+          <button type="button" onClick={() => setIsOpen(false)} className="absolute top-0 right-0">x</button>
+          <h2 className="text-2xl font-bold mb-4">Add new NFT</h2>
+          
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+              <input type="hidden" {...register("hiddenId")} />
+              <div className="flex flex-col">
+                  <label htmlFor="image">Picture</label>
+                  <input type="file" {...register("image")} />
+              </div>
+              <div className="flex flex-col">
+                  <label htmlFor="title">Title</label>
+                  <input className="border p-3 rounded-md" type="text" {...register("title")} />
+              </div>
+              <div className="flex flex-col">
+                  <label htmlFor="description">Description</label>
+                  <input className="border p-3 rounded-md" type="text" {...register("description")} />
+              </div>
+              <div className="flex flex-col">
+                  <label htmlFor="price">Price</label>
+                  <input className="border p-3 rounded-md" type="number" step=".01" {...register("price")} />
+              </div>
+              <button type="submit" className="border p-3 hover:bg-gray-200 hover:border-black rounded-md">Save</button>
+          </form>
+        </div>
       </Modal>
     </div>
   );

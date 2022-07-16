@@ -16,15 +16,19 @@ function SignIn() {
                 navigate("/home")
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                const email = error.customData.email;
-                const credential = GoogleAuthProvider.credentialFromError(error);
+                console.log(error)
             });
     }
     return (
-        <div className="h-screen flex items-center justify-center">
-            <button className="rounded-lg border p-3" onClick={handleSignIn}>Sign in with Google</button>
+        <div className="h-screen flex flex-col items-center justify-center">
+            <h1 className="text-9xl font-bold">NFToad</h1>
+            <h2 className="text-2xl mb-10">The best NFT trading platform</h2>
+            <button 
+                className="rounded-lg border p-3 hover:bg-gray-200 hover:border-black transition-all ease-in-out duration-500" 
+                onClick={handleSignIn}
+            >
+                Sign in with Google
+            </button>
         </div>
     )
 }
