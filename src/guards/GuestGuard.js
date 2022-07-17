@@ -12,7 +12,7 @@ function GuestGuard({ children }) {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setHasUser(true);
-                navigate("wddm-120-create-read-app/home")
+                navigate("/home")
                 return null;
             } else {
                 setHasUser(false)
