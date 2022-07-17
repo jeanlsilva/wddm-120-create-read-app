@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/wddm-120-create-read-app/static/css/main.0c203421.css",
-    "main.js": "/wddm-120-create-read-app/static/js/main.99abb414.js",
+    "main.js": "/wddm-120-create-read-app/static/js/main.07ba3ab3.js",
     "index.html": "/wddm-120-create-read-app/index.html",
     "main.0c203421.css.map": "/wddm-120-create-read-app/static/css/main.0c203421.css.map",
-    "main.99abb414.js.map": "/wddm-120-create-read-app/static/js/main.99abb414.js.map"
+    "main.07ba3ab3.js.map": "/wddm-120-create-read-app/static/js/main.07ba3ab3.js.map"
   },
   "entrypoints": [
     "static/css/main.0c203421.css",
-    "static/js/main.99abb414.js"
+    "static/js/main.07ba3ab3.js"
   ]
 }
