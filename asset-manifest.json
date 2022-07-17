@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/create-read-app/static/css/main.0c203421.css",
+    "main.js": "/create-read-app/static/js/main.c80516d9.js",
+    "index.html": "/create-read-app/index.html",
+    "main.0c203421.css.map": "/create-read-app/static/css/main.0c203421.css.map",
+    "main.c80516d9.js.map": "/create-read-app/static/js/main.c80516d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c203421.css",
+    "static/js/main.c80516d9.js"
+  ]
+}
