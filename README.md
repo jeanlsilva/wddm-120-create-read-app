@@ -16,7 +16,9 @@ Backend: Firebase Realtime Database, Firebase Storage
 
 ## Getting Started
 
-The deployed application can be accessed at https://jeanlsilva.github.io/create-read-app. The Trello board with the project's planning can be found at https://trello.com/b/xMq3Xgbg/wddm-120-a2-read-app.
+The deployed application can be accessed at https://jeanlsilva.github.io/wddm-120-create-read-app/
+The Trello board with the project's planning can be found at https://trello.com/b/xMq3Xgbg/wddm-120-a2-read-app
+The wireframes can be found at https://www.figma.com/file/ueH5LFZgBcOmancZUKtftK/NFToad?node-id=0%3A1
 
 ## Next Steps
 
