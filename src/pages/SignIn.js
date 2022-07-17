@@ -13,7 +13,7 @@ function SignIn() {
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
                 const user = result.user;
-                navigate("/home")
+                navigate("home")
             })
             .catch((error) => {
                 console.log(error)
