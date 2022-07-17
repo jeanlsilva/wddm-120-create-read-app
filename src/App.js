@@ -9,17 +9,17 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/create-read-app" element={
+        <Route path="/wddm-120-create-read-app" element={
           <GuestGuard>
             <SignIn />
           </GuestGuard>
         } />
-        <Route path="/create-read-app/home" element={
+        <Route path="/wddm-120-create-read-app/home" element={
           <AuthGuard>
             <Home />
           </AuthGuard>
         } />
-        <Route path="/create-read-app/mynfts" element={
+        <Route path="/wddm-120-create-read-app/mynfts" element={
           <AuthGuard>
             <MyNFTs />
           </AuthGuard>

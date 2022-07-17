@@ -1,6 +1,6 @@
 {
-  "name": "create-read-app-frontend",
-  "homepage": "https://jeanlsilva.github.io/create-read-app",
+  "name": "wddm-120-create-read-app",
+  "homepage": "https://jeanlsilva.github.io/wddm-120-create-read-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
