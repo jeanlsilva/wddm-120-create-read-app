@@ -71,10 +71,6 @@ const toggleFavorite = () => {
   }
 }
 
-useEffect(() => {
-  console.log(favorite);
-}, [favorite])
-
   return (
     <div>
       <Modal
