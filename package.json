@@ -1,8 +1,7 @@
 {
-  "name": "wddm-120-create-read-app",
-  "homepage": "https://jeanlsilva.github.io/wddm-120-create-read-app/",
+  "name": "nftoad",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "cra-template": "1.2.0",
     "firebase": "^9.9.0",
@@ -18,9 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
