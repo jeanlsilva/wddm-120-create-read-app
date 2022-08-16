@@ -25,25 +25,28 @@ function MyNFTsMainContent() {
     }, []);
 
     useEffect(() => {
-        const keys = Object.keys(nftListResult);
+        console.log(nftListResult)
+        if (nftListResult !== {} && nftListResult !== null) {
+            const keys = Object.keys(nftListResult);
         
-        if (keys.length > 0) {
-            keys.map((key) => {
-                let image;
-               listFiles(storageRef(storage, `images/${key}`))
-               .then((data) => {
-                if (data.items.length > 0) {
-                    getDownloadURL(data.items[0]).then((url) => {
-                        console.log(key);
-                        if (url) {
-                            const img = document.getElementById(key);
-                            img.setAttribute('src', url);
-                        }
-                    })
-                }
-               })
-                return {...nftListResult[key], image}
-            });
+            if (keys.length > 0) {
+                keys.map((key) => {
+                    let image;
+                   listFiles(storageRef(storage, `images/${key}`))
+                   .then((data) => {
+                    if (data.items.length > 0) {
+                        getDownloadURL(data.items[0]).then((url) => {
+                            console.log(key);
+                            if (url) {
+                                const img = document.getElementById(key);
+                                img.setAttribute('src', url);
+                            }
+                        })
+                    }
+                   })
+                    return {...nftListResult[key], image}
+                });
+            }
         }
     }, [nftListResult]);
 
@@ -51,7 +54,7 @@ function MyNFTsMainContent() {
         <>
             <div className="w-[80vw] p-8">
                 <div className="w-full grid grid-cols-2 gap-x-8 gap-y-8 m-auto pb-20">
-                    {Object.keys(nftListResult).map((key) => (
+                    {Object.keys(nftListResult || {}).map((key) => (
                         <GridItem key={key} item={nftListResult[key]} itemId={key} />
                     ))}
                     <AddNewItemBtn onClick={handleOpenModal} />

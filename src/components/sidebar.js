@@ -9,7 +9,7 @@ function Sidebar() {
 
     const handleSignout = () => {
         signOut(auth)
-        .then(() => navigate('/'))
+        .then(() => navigate('/wddm-120-create-read-app'))
         .catch((error) => console.log(error))
     }
 

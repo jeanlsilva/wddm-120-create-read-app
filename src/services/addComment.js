@@ -9,6 +9,7 @@ export function addComment(data) {
         push(ref(database, "comment/" + data.nft + "/" + id), {
             message: data.message,
             user: data.user,
+            name: data.name,
             date: Date.now()
         });
         console.log(data)

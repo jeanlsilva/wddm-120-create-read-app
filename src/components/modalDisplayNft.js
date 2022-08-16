@@ -32,7 +32,7 @@ function ModalDisplayNft(props) {
  const database = getDatabase(app);
 
  const onSubmit = (data) => {
-  addComment({...data, nft: item.id, user: user.uid });
+  addComment({...data, nft: item.id, user: user.uid, name: user.displayName });
   setValue("message", "");
  }
 
@@ -42,6 +42,7 @@ function ModalDisplayNft(props) {
     const starResults = query(ref(database, `star/${item?.id || ''}`))
     onValue(results, (snapshot) => {
         const data = snapshot.val();
+        console.log(data)
         setCommentsList(data);
     });
     onValue(starResults, (snapshot) => {
@@ -104,7 +105,7 @@ useEffect(() => {
                       Object.keys(commentsList[key]).length > 0 && (
                         Object.keys(commentsList[key]).map((item) => (
                           <div key={item} className="flex flex-col">
-                            <p><span className="font-medium">{user.displayName}:</span> {commentsList[key][item].message}</p>
+                            <p><span className="font-medium">{commentsList[key][item].name}:</span> {commentsList[key][item].message}</p>
                             <p className="text-[10px] text-gray-500">{new Date(commentsList[key][item].date).toLocaleDateString('en-US', { day: "numeric", month: "numeric", year: "numeric", hour: "numeric", minute: "numeric"})}</p>
                           </div>
                         ))
